@@ -1,0 +1,201 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf3f5;
+    color: #222;
+    line-height: 1.7;
+    padding: 25px;
+}
+
+/* Header Section */
+header {
+    background-color: #dce9ed;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #cbdde2;
+}
+
+header h1 {
+    color: #19384b;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #536b7c;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #087b83;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #19384b;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #d3e0e5;
+}
+
+/* All Sections */
+section {
+    padding: 25px 10px;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #19384b;
+    font-size: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dce9ed;
+    padding-bottom: 8px;
+}
+
+section h3 {
+    color: #28777b;
+    margin: 15px 0 8px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+/* Profile Photo */
+#about img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #dce9ed;
+    margin: 15px 0;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Description List */
+dl {
+    background-color: #edf5f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+dt {
+    color: #087b83;
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 12px 20px;
+}
+
+/* Project Section */
+#projects article {
+    background-color: #f4f8f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dce9ed;
+}
+
+#projects img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+/* Links */
+a {
+    transition: color 0.2s ease;
+}
+
+section a {
+    color: #087b83;
+}
+
+/* Horizontal Lines */
+hr {
+    border: none;
+    border-top: 1px solid #d5e1e5;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #dce9ed;
+    color: #385567;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px 5px;
+    }
+
+    #about img {
+        width: 120px;
+        height: 120px;
+    }
+}
