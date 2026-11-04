@@ -1,0 +1,414 @@
+
+/* =================================
+   1. CSS DESIGN TOKENS
+================================= */
+
+:root {
+
+    /* Colour Palette */
+    --primary: #173f42;
+    --secondary: #16777b;
+    --background: #edf3f5;
+    --hero-bg: #e0eee6;
+    --white: #ffffff;
+    --text: #29465a;
+    --light-border: #ccdcdf;
+
+    /* Fonts */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+
+    /* Font Sizes */
+    --heading-size: 32px;
+    --subheading-size: 23px;
+    --body-size: 16px;
+
+    /* Spacing */
+    --small-space: 10px;
+    --medium-space: 20px;
+    --large-space: 35px;
+
+    /* Other */
+    --card-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+
+/* =================================
+   2. GENERAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background);
+    color: var(--text);
+    font-size: var(--body-size);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+
+/* =================================
+   3. NAVIGATION BAR
+================================= */
+
+header {
+    background-color: var(--primary);
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 19px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #9de0d5;
+}
+
+
+/* =================================
+   4. HERO SECTION
+================================= */
+
+.hero {
+    max-width: 1250px;
+    margin: auto;
+
+    min-height: 255px;
+    padding: 35px 25px;
+
+    background-color: var(--hero-bg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    border: 1px solid var(--light-border);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.intro {
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    line-height: 1.4;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+
+/* Profile Image */
+
+.hero-image img {
+    width: 150px;
+    height: 155px;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--light-border);
+    border-radius: 12px;
+    background-color: var(--hero-bg);
+}
+
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    padding: 9px 20px;
+
+    background-color: var(--secondary);
+    color: var(--white);
+
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+/* =================================
+   5. CONTENT SECTIONS
+================================= */
+
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 10px 25px;
+}
+
+.content-section {
+    padding: 25px 0;
+    scroll-margin-top: 20px;
+}
+
+.content-section h2 {
+    font-family: var(--heading-font);
+    font-size: var(--subheading-size);
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.content-section h3 {
+    color: var(--primary);
+    font-family: var(--heading-font);
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   6. SKILLS SECTION
+================================= */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list span {
+    background-color: #dcebe8;
+    color: var(--primary);
+
+    padding: 8px 16px;
+    border-radius: 20px;
+
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.skills-list span:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   7. EDUCATION SECTION
+================================= */
+
+.education-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: var(--card-radius);
+
+    padding: var(--medium-space);
+}
+
+.subheading {
+    margin-top: 20px;
+}
+
+.college-list,
+.learning-list {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.definitions {
+    margin-top: 15px;
+}
+
+
+/* =================================
+   8. PROJECT CARDS
+================================= */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: var(--card-radius);
+
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(23, 63, 66, 0.12);
+}
+
+.project-card img {
+    width: calc(100% - 24px);
+    height: 150px;
+    object-fit: cover;
+    margin: 12px;
+    border-radius: 7px;
+}
+
+.project-info {
+    padding: 5px 15px 20px;
+}
+
+.project-info h3 {
+    font-size: 19px;
+}
+
+.project-info p {
+    margin-bottom: 10px;
+}
+
+.project-info a {
+    font-weight: 700;
+}
+
+
+/* =================================
+   9. CONTACT SECTION
+================================= */
+
+#contact {
+    padding-bottom: 40px;
+}
+
+#contact p {
+    margin-bottom: 8px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   10. FOOTER
+================================= */
+
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #9de0d5;
+}
+
+
+/* =================================
+   11. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    main {
+        padding: 10px 18px;
+    }
+}
