@@ -1,0 +1,190 @@
+
+/* CSS VARIABLES */
+:root {
+    --primary-color: #193b50;
+    --secondary-color: #16777b;
+    --background-color: #edf3f5;
+    --white-color: #ffffff;
+    --row-color: #eaf2f6;
+    --border-color: #cbdce3;
+    --text-color: #29465a;
+
+    --spacing-small: 8px;
+    --spacing-medium: 15px;
+    --spacing-large: 25px;
+
+    --font-small: 14px;
+    --font-medium: 16px;
+    --font-large: 28px;
+}
+
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: var(--spacing-large);
+}
+
+/* HEADER */
+header {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+}
+
+.tagline {
+    color: var(--secondary-color);
+    font-size: var(--font-small);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #60788a;
+    font-size: var(--font-medium);
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin: 25px 5px 18px;
+    font-size: 24px;
+}
+
+/* TABLE CONTAINER */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--white-color);
+    border-radius: 8px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    background-color: var(--white-color);
+    font-size: var(--font-medium);
+    text-align: left;
+}
+
+/* TABLE CAPTION */
+caption {
+    caption-side: bottom;
+    padding: 15px;
+    color: #60788a;
+    font-size: var(--font-small);
+}
+
+/* TABLE HEADER */
+thead {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+thead th {
+    padding: var(--spacing-medium);
+    border: 1px solid var(--white-color);
+    font-weight: 600;
+}
+
+/* TABLE BODY */
+tbody th,
+tbody td {
+    padding: var(--spacing-medium);
+    border: 1px solid var(--border-color);
+}
+
+/* BRAND CELLS */
+tbody th {
+    background-color: #dcebe8;
+    color: var(--primary-color);
+    vertical-align: middle;
+    min-width: 130px;
+}
+
+/* STRIPED ROWS */
+tbody tr:nth-child(even) {
+    background-color: var(--row-color);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--white-color);
+}
+
+/* HOVER EFFECT */
+tbody tr:hover {
+    background-color: #d6e9e9;
+    transition: background-color 0.2s ease;
+}
+
+/* TABLE FOOTER */
+tfoot {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+tfoot th,
+tfoot td {
+    padding: var(--spacing-medium);
+    border: 1px solid var(--primary-color);
+}
+
+/* FOOTER */
+footer {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 18px;
+    text-align: center;
+    color: #60788a;
+    font-size: var(--font-small);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: var(--font-large);
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: var(--font-small);
+    }
+
+    thead th,
+    tbody th,
+    tbody td,
+    tfoot th,
+    tfoot td {
+        padding: var(--spacing-small);
+    }
+}
