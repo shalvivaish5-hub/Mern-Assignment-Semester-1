@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment 07 - Flexbox Practice</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #edf3f6;
+            color: #19394f;
+            padding: 35px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .task {
+            margin-bottom: 55px;
+        }
+
+        .task-title {
+            color: #167477;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* 1. MENU PAGE */
+
+        .navbar {
+            background: #153f43;
+            padding: 17px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #e4b65c;
+        }
+
+        .menu-description {
+            margin-top: 15px;
+            color: #60778a;
+        }
+
+
+        /* 2. LOGIN FORM */
+
+        .login-container {
+            background: #dcebe5;
+            min-height: 350px;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            background: white;
+            width: 320px;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #cbd9e2;
+        }
+
+        .login-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-card label {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #9db2c1;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #167477;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #10575a;
+        }
+
+
+        /* 3. PRODUCTS PAGE */
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #cbd9e2;
+            border-radius: 10px;
+            padding: 12px;
+
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .product-card h3 {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        .product-card p {
+            margin-top: 5px;
+            color: #60778a;
+        }
+
+
+        /* 4. NAVBAR + HERO */
+
+        .store-navbar {
+            background: #153f43;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .store-navbar h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .hero {
+            background: #dcebe5;
+            min-height: 280px;
+            padding: 40px 20px;
+            border-radius: 0 0 10px 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .hero a {
+            display: inline-block;
+            background: #167477;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .hero a:hover {
+            background: #10575a;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .navbar,
+            .store-navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .login-card {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox Practice Pack</h1>
+    <p style="margin-bottom: 35px;">
+        HTML & CSS Assignment 07
+    </p>
+
+
+    <!-- TASK 1: MENU PAGE -->
+
+    <section class="task">
+
+        <h3 class="task-title">01 / menu.html</h3>
+
+        <nav class="navbar">
+
+            <h2>CAMPUS MENU</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
+
+        <p class="menu-description">
+            Horizontal links with consistent spacing.
+        </p>
+
+    </section>
+
+
+    <!-- TASK 2: LOGIN PAGE -->
+
+    <section class="task">
+
+        <h3 class="task-title">02 / login.html</h3>
+
+        <div class="login-container">
+
+            <div class="login-card">
+
+                <h2>Welcome Back!</h2>
+
+                <form>
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                    <button type="submit">Log In</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TASK 3: PRODUCTS PAGE -->
+
+    <section class="task" id="products">
+
+        <h3 class="task-title">
+            03 / products.html - 8 Products
+        </h3>
+
+        <div class="product-container">
+
+            <article class="product-card">
+                <img src="notebook.jpeg" alt="Notebook">
+                <h3>Notebook</h3>
+                <p>₹199</p>
+            </article>
+
+            <article class="product-card">
+                <img src="assets/bag.jpeg" alt="Backpack">
+                <h3>Backpack</h3>
+                <p>₹249</p>
+            </article>
+
+            <article class="product-card">
+                <img src="headphones.jpeg" alt="Headphones">
+                <h3>Headphones</h3>
+                <p>₹299</p>
+            </article>
+
+            <article class="product-card">
+                <img src="watch.jpeg" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>₹349</p>
+            </article>
+
+            <article class="product-card">
+                <img src="assets/shoes.jpeg" alt="Shoes">
+                <h3>Shoes</h3>
+                <p>₹399</p>
+            </article>
+
+            <article class="product-card">
+                <img src="bottle.jpeg" alt="Water Bottle">
+                <h3>Water Bottle</h3>
+                <p>₹449</p>
+            </article>
+
+            <article class="product-card">
+                <img src="mouse.jpg" alt="Wireless Mouse">
+                <h3>Wireless Mouse</h3>
+                <p>₹499</p>
+            </article>
+
+            <article class="product-card">
+                <img src="keyboard.jpeg" alt="Keyboard">
+                <h3>Keyboard</h3>
+                <p>₹549</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- TASK 4: NAVBAR + HERO -->
+
+    <section class="task" id="home">
+
+        <h3 class="task-title">04 / navbar-hero.html</h3>
+
+        <nav class="store-navbar">
+
+            <h2>CAMPUS STORE</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
+
+        <div class="hero">
+
+            <h1>Small Essentials. Big Campus Energy.</h1>
+
+            <p>
+                Everything you need for a productive semester.
+            </p>
+
+            <a href="#products">Explore Now</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contact" style="
+        background: #153f43;
+        color: white;
+        padding: 25px;
+        text-align: center;
+    ">
+
+        <h3>Campus Store</h3>
+
+        <p>Learn. Grow. Achieve.</p>
+
+        <p>© 2026 Campus Store. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
