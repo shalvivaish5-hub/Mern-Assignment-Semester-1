@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Brew and Bloom responsive cafe website.">
+    <meta name="author" content="Your Name">
+
+    <title>Brew & Bloom | Responsive Cafe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header id="home">
+
+        <nav class="navbar">
+
+            <h2 class="logo">LEAF <span>&</span> BEAN</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-tag">YOUR NEIGHBOURHOOD CAFE</p>
+
+                <h1>
+                    Good coffee.<br>
+                    A little room to pause.
+                </h1>
+
+                <p>
+                    Fresh brews and warm bites.
+                    Enjoy every moment with us.
+                </p>
+
+                <a href="#services" class="hero-button">
+                    Visit Us
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section class="section about-section" id="about">
+
+            <p class="section-tag">OUR STORY</p>
+
+            <h2>Welcome to Leaf & Bean</h2>
+
+            <p>
+                We believe that a good cup of coffee can make
+                your day better. Our cafe offers freshly brewed
+                coffee, delicious food and a peaceful environment.
+
+                Whether you want to meet friends or study,
+                we have a comfortable place for you.
+            </p>
+
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+
+        <section class="section services-section" id="services">
+
+            <p class="section-tag">WHAT WE OFFER</p>
+
+            <h2>Our Favourites</h2>
+
+            <div class="service-container">
+
+                <article class="service-card card-one">
+
+                    <div class="service-icon">☕</div>
+
+                    <h3>Fresh Brews</h3>
+
+                    <p>
+                        Coffee made your way with freshly
+                        selected coffee beans.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card card-two">
+
+                    <div class="service-icon">🥪</div>
+
+                    <h3>Warm Bites</h3>
+
+                    <p>
+                        Delicious sandwiches, bakery
+                        items and tasty treats.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card card-three">
+
+                    <div class="service-icon">📚</div>
+
+                    <h3>Study Corner</h3>
+
+                    <p>
+                        A peaceful space for reading,
+                        studying and working.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY SECTION -->
+
+        <section class="section gallery-section" id="gallery">
+
+            <p class="section-tag">A GLIMPSE OF US</p>
+
+            <h2>Our Little World</h2>
+
+            <div class="gallery-container">
+
+                <img src=coffee.jpeg
+                     alt="Freshly prepared coffee served in a ceramic cup">
+
+                <img src=cafe_interior.jpeg
+                     alt="Warm and comfortable cafe interior">
+
+            </div>
+
+            <p class="gallery-caption">
+                Beautiful spaces, fresh flavours and happy moments.
+            </p>
+
+        </section>
+
+
+        <!-- TESTIMONIAL -->
+
+        <section class="testimonial">
+
+            <p class="section-tag">CUSTOMER LOVE</p>
+
+            <h2>A Place Worth Visiting!</h2>
+
+            <p class="quote">
+                "The coffee is amazing, the atmosphere is peaceful
+                and it is my favourite place to spend time with friends."
+            </p>
+
+            <h4>— A Happy Customer</h4>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section class="section contact-section" id="contact">
+
+            <p class="section-tag">GET IN TOUCH</p>
+
+            <h2>Come Say Hello!</h2>
+
+            <p>
+                Have a question? Send us a message.
+            </p>
+
+            <div class="contact-details">
+
+                <p><strong>Address:</strong> 12 College Road, Bareilly</p>
+
+                <p><strong>Email:</strong> shalvivaish123@gmail.com</p>
+
+                <p><strong>Opening Hours:</strong> 9 AM – 9 PM</p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <label for="name">Your Name</label>
+
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+
+
+                <label for="email">Email Address</label>
+
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+
+                <label for="message">Your Message</label>
+
+                <textarea id="message" rows="4"
+                          placeholder="Write your message..."
+                          required></textarea>
+
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RESPONSIVE AUDIT REPORT -->
+
+        <section class="audit-section">
+
+            <h2>Responsive Design Audit</h2>
+
+            <div class="audit-grid">
+
+                <article class="audit-card">
+                    <h3>Desktop - 1200px</h3>
+                    <p>Full navigation and three service cards.</p>
+                    <span>Optimized</span>
+                </article>
+
+                <article class="audit-card">
+                    <h3>Tablet - 768px</h3>
+                    <p>Flexible cards and adjusted spacing.</p>
+                    <span>Optimized</span>
+                </article>
+
+                <article class="audit-card">
+                    <h3>Mobile - 375px</h3>
+                    <p>Stacked navigation and single-column cards.</p>
+                    <span>Optimized</span>
+                </article>
+
+            </div>
+
+            <h3 class="audit-title">Before → After Mobile Navigation</h3>
+
+            <div class="before-after">
+
+                <div class="before">
+                    <h3>Before: Links overflow</h3>
+                    <p>Home &nbsp; About &nbsp; Services &nbsp; Contact →</p>
+                </div>
+
+                <div class="after">
+                    <h3>After: Links fit the screen</h3>
+                    <p>Home / About / Services / Contact</p>
+                </div>
+
+            </div>
+
+            <h3 class="audit-title">audit.md - Sample Report</h3>
+
+            <ul class="audit-list">
+                <li>Images overflowing | 375px | max-width: 100%</li>
+                <li>Menu overflowing | 375px | Stack links using media query</li>
+                <li>Cards too narrow | 768px | Reflow cards</li>
+                <li>Buttons too close | 375px | Increase spacing and padding</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>LEAF & BEAN</h2>
+
+        <p>Good coffee. Good food. Good vibes.</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Leaf & Bean. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
